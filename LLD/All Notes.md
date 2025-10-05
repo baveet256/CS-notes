@@ -137,5 +137,24 @@ Liskov Substitution Principle:
 
 	For example, there is a premium account and a normal account, which has a limit of $100 on an account.
 
+Interface Segregation Principle
+	Many client specific interface is better than one general purpose interface
+	Client should not implement methods they don't need.
+
+	So just make a different class where many clients need to implement methods that are not needed
+
+Dependency Inversion Principle
+	High level module should not depend on low level module but rather both should depend on
+	Abstraction.
+
+	So lets say we have 2 db and application layers calls it to interact and save data. But thats high level and Low level (server) things interact directly,
+	What we can do it add a class Persistence between them:
+
+	Persistence p has this method called save, and all those Databases references, So if new database is added, Persistence p dynamically can reference to its child class object of new_database. and it also has save method overided. 
+
+	and so, we have an interface now betwwen High level and low level
+
+	If Open Close is the target, dependency inversion is the solution
+
 
 
