@@ -97,16 +97,43 @@ Open Close Principle
 
 Liskov Substitution Principle:
 
-Subclasses should be substitutable for their base classes, child should implement atleast the parent methods and may increase it.
+	Subclasses should be substitutable for their base classes, child should implement at-least the parent methods and may increase it.
+	
+	Code Breaks when for e.g. there is a parent account class, a child class it just a fixed deposit account class, and we cannot have withdraw from a FD account, so the child class cannot be substituted here for the base class.
+	
+	doing a coupling from client side, like a condition that if the account type is FD, then there is no option to call for withdraw, makes it coupled and is not a good practice. (This modifies the client side code, so straight breaks the O principle )Client should directly talk to the interface (base abstracted class) and further routing should be set from there
+	
+	**Better Way**:
+	
+	FD should never be a child to account class as its decreasing the functionality of its parent.
+	Create a abstract class named: NonwithdrawsAccount and WithdrawsAccount.
+	FD extends the NonWithdraw one while savings, checkin extends the Withdraw one.
+	
+	Guide Lines:
+	
+	if user/client calls on some function on a class, then method on that class and its child classes can be called. the methods that are parent to the class, cannot be called as they could have less functionality and child always has atleast same functions of the parent.
+	
+	so in short return current or narrower and not broader one.
+	
+	Similarly for exceptions, if a parent method defines, lets say a logic error
+	then its child cannot throw exception which are from a different class and can only throw the child exception classes
+	
+	Child class should behave as the parent class
+		term broad : parent
+		term narrow : child
+	 **==Precondition Rule in LSP==**
+	
+  	A subclass **must not strengthen** the preconditions of its parent class.
+	
+	 🔹 Meaning:
+	
+	If the parent allows some inputs,  
+	the child **must also accept at least those same inputs (or more)**.
+	
+	It **cannot** add new restrictions that make the method harder to call.
 
-Breaks like when parent is account class, and a child class it just a fixed deposit account class, and we cannot have withdraw from a FD account, so the child class cannot be substituted here for the base class.
+	Or, It may strengthen the Post Condition, 
+	LSP says:  A subclass can make fewer demands (weaker preconditions) and offer stronger guarantees (stronger postconditions) — but never the opposite.
 
-doing a coupling from client side, like a condition that if the account type is FD, then there is no option to call for withdraw, makes it coupled and is not a good practice. (This modifies the client side code, so straight breaks the O principle )Client should directly talk to the interface (base abstracted class) and further routing should be set from there
-
-**Better Way**:
-
-FD should never be a child to account class as its decreasing the functionality of its parent.
-Create a abstract class named: NonwithdrawsAccount and WithdrawsAccount.
-FD extends the NonWithdraw one while savings, checkin extends the Withdraw one.
 
 
