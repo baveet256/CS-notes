@@ -135,5 +135,7 @@ Liskov Substitution Principle:
 	Or, It may strengthen the Post Condition, 
 	LSP says:  A subclass can make fewer demands (weaker preconditions) and offer stronger guarantees (stronger postconditions) — but never the opposite.
 
+	For example, there is a premium account and a normal account, which has a limit of $100 on an account.
+
 
 
