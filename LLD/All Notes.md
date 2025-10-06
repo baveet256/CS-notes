@@ -138,6 +138,7 @@ Liskov Substitution Principle:
 	For example, there is a premium account and a normal account, which has a limit of $100 on an account.
 
 Interface Segregation Principle
+
 	Many client specific interface is better than one general purpose interface
 	Client should not implement methods they don't need.
 
