@@ -142,7 +142,7 @@ Interface Segregation Principle
 	Many client specific interface is better than one general purpose interface
 	Client should not implement methods they don't need.
 
-	So just make a different class where many clients need to implement methods that are not needed
+	So just make a different class where clients only need to implement methods that are needed for them and nothing else.
 
 Dependency Inversion Principle
 	High level module should not depend on low level module but rather both should depend on
@@ -158,4 +158,6 @@ Dependency Inversion Principle
 	If Open Close is the target, dependency inversion is the solution
 
 
+
+Build Google Docs
 

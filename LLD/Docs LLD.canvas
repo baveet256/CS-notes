@@ -1,0 +1,21 @@
+{
+	"nodes":[
+		{"id":"8367a056e6358f0a","type":"text","text":"Document Editor\n\nDocument db;\npersistence db;\n-------------------------\n\nAdd text(String data)\nadd image(string path)\n\nrender()\nsave()","x":-20,"y":-360,"width":319,"height":301,"color":"1"},
+		{"id":"ea2a885ad8f78a76","type":"text","text":"Persistence DB\n\nsave()\n-------------------------\n","x":-300,"y":80,"width":400,"height":160,"color":"4"},
+		{"id":"cc65a18c336ddbb2","type":"text","text":"SaveToSQL\n\nsave();","x":-380,"y":360,"width":259,"height":175},
+		{"id":"17fce763bf5d19f2","type":"text","text":"SaveToMongoDB\n\nsave();","x":-39,"y":352,"width":250,"height":183},
+		{"id":"bc3b618fa8942a9f","type":"text","text":"Document \n\nvector<document_element> dc\n\nadd_element(document_element ele);\nrender();","x":-640,"y":-560,"width":340,"height":200,"color":"4"},
+		{"id":"505f116aa152c671","type":"text","text":"Document_element\n\nrender();","x":-1176,"y":-544,"width":250,"height":84},
+		{"id":"1dceb507b68d7d87","type":"text","text":"Text Element\n\nrender();","x":-1301,"y":-289,"width":250,"height":129},
+		{"id":"be31b6ab4648e925","type":"text","text":"Image Element\n\nrender()l","x":-1000,"y":-289,"width":250,"height":129}
+	],
+	"edges":[
+		{"id":"87b5e41d05435417","fromNode":"8367a056e6358f0a","fromSide":"bottom","toNode":"ea2a885ad8f78a76","toSide":"top","label":"has a"},
+		{"id":"ed46eed09eb2c0fd","fromNode":"ea2a885ad8f78a76","fromSide":"bottom","toNode":"cc65a18c336ddbb2","toSide":"top","label":"is a"},
+		{"id":"1807f867627f81c1","fromNode":"ea2a885ad8f78a76","fromSide":"bottom","toNode":"17fce763bf5d19f2","toSide":"top"},
+		{"id":"980d9d519d615794","fromNode":"8367a056e6358f0a","fromSide":"left","toNode":"bc3b618fa8942a9f","toSide":"right","label":"has a"},
+		{"id":"283c8e3aa15f0e6e","fromNode":"bc3b618fa8942a9f","fromSide":"left","toNode":"505f116aa152c671","toSide":"right","label":"1 to many"},
+		{"id":"df5f9d3d680074ea","fromNode":"505f116aa152c671","fromSide":"bottom","toNode":"1dceb507b68d7d87","toSide":"top","label":"is a"},
+		{"id":"1910663e85001d37","fromNode":"505f116aa152c671","fromSide":"bottom","toNode":"be31b6ab4648e925","toSide":"top","label":"is a"}
+	]
+}
