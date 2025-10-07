@@ -168,8 +168,10 @@ Strategy Design Pattern
 		Problem happens when, these new child methods implement same new functions.
 		So, there is a robot parent class with walk,talk,projection functions, initially we have basic robots that that are okay, but imagine the new generation robots needed write or fly or something else. We then have to write same writing function or flying method in all of them, which in turn violates DNY(Do Not Repeat Yourself) principle.
 	Inheritance hierarchy  :
-		It can provide some relieve but if varieties of classes arrive then it will just complicate the whole system.
-		Start from basic reasoning, identify the parts of system in 2: static and dynamic things. make the dynamic part flexible to extend and it should not block or bother the static part.
-			> In the Robot example, talk,walk,fly were some problems. So just put them in seperate classes, then in runtime we can make objects dynamically with the requirement
-			>  Main class if often called client, as it has no algo's, just reference to different strategies (here its talk, walk, fly)
-			>  Talkable is an abstract class and its children can be many strategies, so if a new talking pattern comes, then it can be integrated here, just make a new child with that talking. Similarly, for fly and walk too.
+			It can provide some relieve but if varieties of classes arrive then it will just complicate the whole system.
+			Start from basic reasoning, identify the parts of system in 2: static and dynamic things. make the dynamic part flexible to extend and it should not block or bother the static part.
+			> 	In the Robot example, talk,walk,fly were some problems. So just put them in seperate classes, then in runtime we can make objects dynamically with the requirement
+			> 	 Main class if often called client, as it has no algo's, just reference to different strategies (here its talk, walk, fly)
+			> 	 Talkable is an abstract class and its children can be many strategies, so if a new talking pattern comes, then it can be integrated here, just make a new child with that talking. Similarly, for fly and walk too.
+
+	Favour composition over inheritence
