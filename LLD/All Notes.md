@@ -162,6 +162,7 @@ Dependency Inversion Principle
 Build Google Docs - Canvas , py code
 
 Strategy Design Pattern
+
 	For example:
 		We Build a class with some methods, and new child can inherit them and also extend their functionality
 		Problem happens when, these new child methods implement same new functions.
@@ -172,27 +173,3 @@ Strategy Design Pattern
 			> In the Robot example, talk,walk,fly were some problems. So just put them in seperate classes, then in runtime we can make objects dynamically with the requirement
 			>  Main class if often called client, as it has no algo's, just reference to different strategies (here its talk, walk, fly)
 			>  Talkable is an abstract class and its children can be many strategies, so if a new talking pattern comes, then it can be integrated here, just make a new child with that talking. Similarly, for fly and walk too.
-	
-			
-`class Robot:`
-    `def __init__(self, talk_strategy, walk_strategy, fly_strategy):`
-        `self.talk_strategy = talk_strategy`
-        `self.walk_strategy = walk_strategy`
-        `self.fly_strategy = fly_strategy`
-
-    `def talk(self):`
-        `self.talk_strategy.talk()`
-
-`class TalkStrategy:` 
-    `def talk(self): pass`
-
-`class NormalTalk(TalkStrategy):` 
-    `def talk(self): print("Speaking normally")`
-
-`class SilentTalk(TalkStrategy):` 
-    `def talk(self): print("Silent mode")`
-
-`robot = Robot(NormalTalk(), None, None)`
-`robot.talk()  # Speaking normally`
-			
-
