@@ -149,5 +149,22 @@ Do you want me to do that?
 >   Answer: Layer 4 Load Balancing (Transport Layer) ● Operates at the network transport level (TCP/UDP). ● Distributes traffic based on IP addresses and port numbers without inspecting request content. ● Faster and more efficient for simple traffic distribution. ● Examples: AWS Network Load Balancer (NLB), HAProxy (L4 Mode). 
 >   Layer 7 Load Balancing (Application Layer) ● Works at the application level (HTTP/HTTPS). ● Routes requests based on content, headers, cookies, or URL paths. ● Supports advanced features like SSL termination, caching, and authentication. ● Examples: AWS Application Load Balancer (ALB), Nginx, Traefik. Key Difference: Layer 4 is faster but less flexible, while Layer 7 is intelligent but adds overhead
 
->
+>1. What is a CDN, and how does it work? 
+>   
+>   A Content Delivery Network (CDN) is a distributed network of servers that work together to deliver content to users efficiently. The primary goal of a CDN is to reduce latency and load times by caching content in multiple geographically distributed servers called edge servers or PoPs (Points of Presence). How It Works: 1. A user requests content (e.g., an image, video, or webpage). 2. The request is directed to the nearest CDN edge server based on factors like geographic location, network latency, and server load. 3. If the requested content is already cached on the edge server (Cache Hit), it is delivered instantly. 4. If the content is not cached (Cache Miss), the request is forwarded to the origin server, fetched, and stored at the edge server for future requests.
 
+>2. Why do we need CDNs in system design? 
+>   
+>   Without a CDN, content is served directly from the origin server, which leads to: ● High latency due to geographic distance between the user and the server. ● Overloaded origin servers, causing slower responses and downtime. ● Bandwidth constraints, leading to slow page load times and higher operational costs. ● Security risks, including DDoS attacks and malicious traffic. CDNs solve these problems by distributing traffic across multiple edge locations, caching frequently accessed content, and protecting against cyber threats.
+
+>4. Explain the difference between an origin server and an edge server in a CDN.
+>   
+>    ● Origin Server: The central server that hosts the original content. It is responsible for serving content when a cache miss occurs. 
+>    ● Edge Server (PoP): A geographically distributed server that caches content closer to users to reduce latency. 💡 Analogy: The origin server is like a main warehouse, while edge servers are local distribution centers that store frequently accessed goods.
+
+>How does request routing work in a CDN? 
+>
+>CDNs use various routing strategies to direct user requests to the optimal edge server: 
+>● Geo-Based Routing: Users are directed to the closest PoP. 
+>● Latency-Based Routing: Requests go to the PoP with the lowest network latency. 
+>● Load-Aware Routing: Traffic is balanced across multiple PoPs to prevent overload.
