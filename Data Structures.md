@@ -29,4 +29,8 @@ Next Permutation:
 	
 	Finally we got 53014, which is the next permutation
 
+Subarray Sum K
+	
+	I’m at prefix j — use all _previous_ prefix sums to find matches,  
+	then remember this prefix for future j’s.
 
