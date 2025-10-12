@@ -168,3 +168,4 @@ Do you want me to do that?
 >● Geo-Based Routing: Users are directed to the closest PoP. 
 >● Latency-Based Routing: Requests go to the PoP with the lowest network latency. 
 >● Load-Aware Routing: Traffic is balanced across multiple PoPs to prevent overload.
+
