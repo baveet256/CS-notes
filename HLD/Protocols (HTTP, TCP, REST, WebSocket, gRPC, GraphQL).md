@@ -540,15 +540,15 @@ Slack uses AWS ELB with sticky sessions for WebSocket connections.
 
 ### 📊 Comparison Table
 
-|Feature|REST|gRPC|GraphQL|
-|---|---|---|---|
-|**Protocol**|HTTP/1.1, HTTP/2|HTTP/2 (Binary)|HTTP (JSON-based)|
-|**Data Format**|JSON, XML|Protocol Buffers (Binary)|JSON|
-|**Performance**|Slower (text-based)|🔥 High (binary + multiplexing)|Moderate|
-|**Flexibility**|Fixed endpoints|Strongly typed contracts (.proto)|Highly flexible field-level queries|
-|**Best For**|Public APIs, CRUD apps|Microservices, real-time, low-latency systems|Frontend-driven, data-flexible APIs|
-|**Streaming Support**|❌ None (polling needed)|✅ Built-in bidirectional streaming|⚙️ Needs WebSockets|
-|**Downsides**|Over/under-fetching|Harder debugging (binary)|Complex caching & optimization|
+| Feature               | REST                    | gRPC                                                                                       | GraphQL                             |
+| --------------------- | ----------------------- | ------------------------------------------------------------------------------------------ | ----------------------------------- |
+| **Protocol**          | HTTP/1.1, HTTP/2        | HTTP/2 (Binary)                                                                            | HTTP (JSON-based)                   |
+| **Data Format**       | JSON, XML               | Protocol Buffers (Binary)                                                                  | JSON                                |
+| **Performance**       | Slower (text-based)     | 🔥 High (binary + multiplexing)                                                            | Moderate                            |
+| **Flexibility**       | Fixed endpoints         | Strongly typed contracts (.proto) (**Single Endpoint : Clients tell what data they need**) | Highly flexible field-level queries |
+| **Best For**          | Public APIs, CRUD apps  | Microservices, real-time, low-latency systems                                              | Frontend-driven, data-flexible APIs |
+| **Streaming Support** | ❌ None (polling needed) | ✅ Built-in bidirectional streaming                                                         | ⚙️ Needs WebSockets                 |
+| **Downsides**         | Over/under-fetching     | Harder debugging (binary)                                                                  | Complex caching & optimization      |
 
 ---
 
