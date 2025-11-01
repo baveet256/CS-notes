@@ -13,7 +13,7 @@
     
     - Simple to develop & deploy
         
-    - Easy for small apps
+    - Easy for small apps`
         
     - Less complex (single codebase)
         
