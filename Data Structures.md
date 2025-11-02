@@ -41,4 +41,39 @@ WE know the property: if we divide by l,m,r then either of l,m or m,r  has to be
 so use this property to find the minimum, 
 store the minimum element of the sorted array (the first one), then skip the array as we dont need to see larget elements more, we got the minimum, just move forward with new and potentially small elements.
 
-## 
+## 3 Sum Problem
+	Sort the array, 
+		loop i,
+			if i>0 and nums[i] == nums[i-1]: continue  // dublicates
+			
+		 j<k while loop starts at i+1, k at end
+
+			if sum i+j+k > 0 k--
+			else sum < 0 j+=1
+			else
+				ans and then we need to ensure that:  we are not repeating numbers at j and k and so while loop so we escape that range.
+				while j> k and nums[j] == nums[j-1] : j+=1
+				and so for k
+
+## Majority Element II
+	The counters dont store the exact frequency count n/3, they just say about potential answers. 
+
+	pseudo code:
+		Cnt1,ele1,cnt2,ele2
+
+		if cnt1== 0 and nums[i]!=ele2 # dont need double counting of same element
+		Similarly,
+		if cnt2== 0 and nums[i]!=ele1 # dont need double counting of same element
+		All other cases
+
+		Then a final loop to check if both ele, have count > n/3.
+
+
+
+
+
+
+## Single element in twice repeating array (BS)
+	if 0th index is not single, then the pattern is like, even and odd numbers till we have the single element, after that pattern shifts to odd even occurences.
+
+so a binary search approach is that, when at mid, if mid-1 is also equal and see the indices, if mid-1 is lets say even and mid is odd, then its guranteed that the single element is in the right half of the array and vice versa.
