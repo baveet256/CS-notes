@@ -34,3 +34,13 @@ Subarray Sum K
 	I’m at prefix j — use all _previous_ prefix sums to find matches,  
 	then remember this prefix for future j’s.
 
+>Finding the minimum element in a rotated array
+
+WE know the property: if we divide by l,m,r then either of l,m or m,r  has to be sorted,
+so use this property to find the minimum, 
+store the minimum element of the sorted array (the first one), then skip the array as we dont need to see larget elements more, we got the minimum, just move forward with new and potentially small elements.
+
+
+
+>		
+>
