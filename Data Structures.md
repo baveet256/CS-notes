@@ -1,10 +1,10 @@
-Best Time to Buy and Sell Stock - leetcode 121 :
+## Best Time to Buy and Sell Stock - leetcode 121 :
 	Trick : We are on an element, the best time to buy if we are seliing on the current element is the minimum element (0 to i-1) index, so just maintain a minimum element while solving and that's it
 
-Pushing Zero to the end:
+## Pushing Zero to the end:
 	Trick: we can just start with 2 pointers with first pointer in the start and the second pointer in the end. The first pointer can can  move forward until 0 occurs, similarly end pointer can move back until it finds a number, then swap them  and continue until they pass each other
 
-Next Permutation:
+## Next Permutation:
 	How to approach:
 
 		We have to find out the next permutation. that means the next number in the dictionary order of all permutations
@@ -29,7 +29,7 @@ Next Permutation:
 	
 	Finally we got 53014, which is the next permutation
 
-Subarray Sum K
+## Subarray Sum K
 	
 	I’m at prefix j — use all _previous_ prefix sums to find matches,  
 	then remember this prefix for future j’s.
@@ -41,7 +41,4 @@ WE know the property: if we divide by l,m,r then either of l,m or m,r  has to be
 so use this property to find the minimum, 
 store the minimum element of the sorted array (the first one), then skip the array as we dont need to see larget elements more, we got the minimum, just move forward with new and potentially small elements.
 
-
-
->		
->
+## 
