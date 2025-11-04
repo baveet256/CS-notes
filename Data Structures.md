@@ -77,3 +77,14 @@ store the minimum element of the sorted array (the first one), then skip the arr
 	if 0th index is not single, then the pattern is like, even and odd numbers till we have the single element, after that pattern shifts to odd even occurences.
 
 so a binary search approach is that, when at mid, if mid-1 is also equal and see the indices, if mid-1 is lets say even and mid is odd, then its guranteed that the single element is in the right half of the array and vice versa.
+
+## Merge Sorted array (no extra space : 2 approaches)
+
+First:
+	one pointer at the end of first array, 2nd pointer at the start of second array, now start comparing, i1+=1 and i2-=1, whereever nums1[i1] < nums2[i2], then previous elements would also satisfy as i1 goes towards decreasing value, whereas i2 towards increasing.
+	So, we can stop here, sort the individual array to get both of them sorted.
+
+Second:
+	Gap Method: initial gap  = ceil (m+n/2) or  ((m+n) / 2) + (m+n)%2 works as ceil
+	start a pointer at i at first array and another at i+gap. then start comparing if they can be swapped. when the right pointer reaches the end. 
+	Then, do gap/2 with ceil and repeat again with updated gap. when gap == 1 stop, and we have the SORTED ARRAYS.
