@@ -88,3 +88,4 @@ Second:
 	Gap Method: initial gap  = ceil (m+n/2) or  ((m+n) / 2) + (m+n)%2 works as ceil
 	start a pointer at i at first array and another at i+gap. then start comparing if they can be swapped. when the right pointer reaches the end. 
 	Then, do gap/2 with ceil and repeat again with updated gap. when gap == 1 stop, and we have the SORTED ARRAYS.
+
