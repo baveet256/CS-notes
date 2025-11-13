@@ -38,6 +38,17 @@ Think of it as a “death relationship” — parts die with the whole
         
     - Composition → `Car` has `Engine` (engine doesn’t exist without car).
 
+|Feature|Association|Aggregation|
+|---|---|---|
+|Relationship type|General relationship|“Whole-part” relationship|
+|Ownership|No ownership|Whole “owns” parts loosely|
+|Lifecycle|Independent|Parts can exist independently|
+|UML Symbol|Simple line|Line with hollow diamond|
+|Example|Teacher – Student|Library – Book|
+
+
+
+**
 
 |Relationship|Lifespan|UML Symbol|Example|Description|
 |---|---|---|---|---|
