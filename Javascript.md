@@ -133,4 +133,19 @@ Execution context, has 2 parts, memory and code execution, vars, and functions c
 if this happens inside functions, the code execution searches lower/ parent stacks sequentially until it finds the var, if not found till the global, then return not defined.
 
 let, const also do hoisting but after declaring with them, the elements are **NOT stored in global execution context memory window** and so they cannot be access when console log is executed before even declaring them. 
+-##----------------------------------------------------------------------------------##
 
+
+let and const are hoisted. we cant use them before initialization is result of "temporal dead zone". 
+JS use diff memory than global execution context to store let and cost. which is reason behind "temporal dead zone" 
+
+level of strictness ... var<<let<<const.
+
+var  has no temporal dead zone, can redeclare and re-initialize, stored in GES 
+**let use TDZ,** can't re-declare, can re-initialize, stored in separate memory
+**const use TDZ**, can't re-declare, can't re-initialize, stored in separate memory 
+
+syntax error is similar to compile error. while type and reference error falls under run time error. 
+syntax error ... violation of JS syntax 
+
+type error ... while trying to re-initialize const variable reference error ... while trying to access variable which is not there in global memory.
