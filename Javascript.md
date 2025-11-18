@@ -149,3 +149,28 @@ syntax error is similar to compile error. while type and reference error falls u
 syntax error ... violation of JS syntax 
 
 type error ... while trying to re-initialize const variable reference error ... while trying to access variable which is not there in global memory.
+
+## Closure
+A function which is bundled together with its lexical environment
+When a function is returned, **its original lexical environment is preserved**, even after the outer function has finished executing.
+# 📌 Example (Classic Closure)
+
+`function outer() 
+{   let x = 10;    
+	function inner() {     
+	console.log(x);  
+} 
+return inner; 
+}  
+const fn = outer(); 
+
+fn();`
+
+**A closure is a function + its backpack.  
+The backpack contains all the variables from the scope where it was born.  
+The backpack travels with the function everywhere it goes.
+
+✔️ A closure packs _everything in the scope chain where it was defined_. from there to global -> null
+
+It never “forgets” the environment from its birth.
+
