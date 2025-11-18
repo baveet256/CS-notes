@@ -125,3 +125,12 @@ export default function Page() {
     
 - Used everywhere async is needed (APIs, DB, files, timers)
     
+
+##  Hoisting in JS
+
+Execution context, has 2 parts, memory and code execution, vars, and functions code are stored in this context first before executing. and so if we do console log before we define the var, we get undefined, as memory is already allocated, and set to undefined. 
+
+if this happens inside functions, the code execution searches lower/ parent stacks sequentially until it finds the var, if not found till the global, then return not defined.
+
+let, const also do hoisting but after declaring with them, the elements are **NOT stored in global execution context memory window** and so they cannot be access when console log is executed before even declaring them. 
+
