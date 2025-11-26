@@ -89,3 +89,13 @@ Second:
 	start a pointer at i at first array and another at i+gap. then start comparing if they can be swapped. when the right pointer reaches the end. 
 	Then, do gap/2 with ceil and repeat again with updated gap. when gap == 1 stop, and we have the SORTED ARRAYS.
 
+
+
+
+## ### **Dijkstra explanation**
+
+We do **not** use a visited array in Dijkstra because a node might be reached again with a smaller cost from a different path. Therefore, we rely on a `dist[][]` matrix: whenever we find a smaller cost, we push that state into the min-heap. The min-heap ensures we always expand the currently most promising (minimum-cost) state first, improving convergence.
+
+##### **BFS explanation**
+
+In BFS, all edges have equal weight. BFS processes states level by level, so the first time we reach a node, we have already found its shortest path. Any later revisit would always come from a deeper level (greater distance), so it can never be optimal. That’s why BFS uses a visited array and doesn't reconsider nodes
