@@ -76,7 +76,64 @@ Each one usually has:
 Because of this, **TypeScript must know how to compile that service separately**, so it needs a `tsconfig.json`.
 
 
+# 📝 **Login + OTP Flow with Redis + RabbitMQ + Mail Worker**
 
+### 1️⃣ **Login Request**
+
+- User submits email to backend (`POST /loginUser`)
+    
+- Controller logic:
+    
+    - Validate email
+        
+    - Generate random OTP (6 digits)
+        
+    - Store OTP in Redis with TTL (e.g., 5 minutes)
+        
+    - Publish OTP job to RabbitMQ (`send-otp` queue)
+        
+
+### 2️⃣ **Mail Microservice (Worker)**
+
+- Listens on `send-otp` queue
+    
+- Receives job: `{ to, subject, text }`
+    
+- Sends email via Nodemailer
+    
+- Calls `channel.ack(msg)` **after email sent**
+    
+
+> ✅ Note: RabbitMQ `ack` only confirms message delivery; it does **not** verify OTP correctness.
+
+### 3️⃣ **OTP Verification**
+
+- Frontend collects OTP from user input
+    
+- Sends to backend (`POST /verify-otp`)
+    
+- Controller:
+    
+    - Fetch stored OTP from Redis (`otp:<email>`)
+        
+    - Compare input OTP with stored OTP
+        
+        - Match → login successful → optionally redirect to home
+            
+        - No match → return error
+            
+    - Delete OTP from Redis to prevent reuse
+        
+
+### 4️⃣ **Key Points**
+
+- RabbitMQ is only for **asynchronous email delivery**
+    
+- Redis is the **single source of truth** for OTP verification
+    
+- Controllers remain fast — email sending does not block API response
+    
+- Rate-limiting and TTL ensure security and prevent brute-force
 
 
 
