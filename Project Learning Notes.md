@@ -47,6 +47,37 @@ This makes the login flow:
 
 Queues decouple the **API logic** from the **slow background job** of sending OTP emails/SMS.
 
+We use Amqblib in background to connect rabbitmq with the node
+
+# ✅ Why a new service needs its own `tsconfig.json`
+
+A **service** usually means:
+
+- a different backend microservice
+    
+- a worker service (RabbitMQ consumer)
+    
+- a separate server
+    
+- any independent process
+    
+
+Each one usually has:
+
+- its own source folder
+    
+- its own build output
+    
+- possibly different TypeScript settings
+    
+- its own `package.json` (optional but common)
+    
+
+Because of this, **TypeScript must know how to compile that service separately**, so it needs a `tsconfig.json`.
+
+
+
+
 
 
 
