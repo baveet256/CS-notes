@@ -100,3 +100,5 @@ We do **not** use a visited array in Dijkstra because a node might be reached ag
 
 In BFS, all edges have equal weight. BFS processes states level by level, so the first time we reach a node, we have already found its shortest path. Any later revisit would always come from a deeper level (greater distance), so it can never be optimal. That’s why BFS uses a visited array and doesn't reconsider nodes
 
+
+

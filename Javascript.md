@@ -174,3 +174,50 @@ The backpack travels with the function everywhere it goes.
 
 It never “forgets” the environment from its birth.
 
+
+
+#  Call stack,  callback queues, micro task queue, Event Loop
+**Call Stack**
+
+- Holds currently executing functions (LIFO).
+    
+- Only one function runs at a time.
+    
+
+**Task Queue (Macrotask Queue)**
+
+- Stores callbacks from asynchronous sources like `setTimeout`, DOM events, HTTP responses.
+    
+- Lower priority than microtasks.
+    
+
+**Microtask Queue**
+
+- Stores microtasks: **Promise callbacks**, queueMicrotask, MutationObserver.
+    
+- Runs **before** the task queue, after each execution frame.
+    
+
+**Event Loop**
+
+- Checks if the call stack is empty.
+    
+- If empty → runs **all microtasks first**.
+    
+- If microtasks are done → takes one macrotask from task queue and executes it.
+- Also, there is a risk of starvation in callback queue if a task in microtask queue, produces another microtask and event loop goes on pumping the call stack with this task, completely leaving callback queue, as its priority is less and microtask queue continues to fill.
+    
+- Repeats forever.
+    
+
+**Flow**
+
+1. JS runs synchronous code.
+    
+2. Async operations schedule callbacks into **task queue** or **microtask queue**.
+    
+3. When stack is empty → event loop drains microtasks.
+    
+4. If microtask queue empty → runs one macrotask.
+    
+5. Cycle repeats
