@@ -102,3 +102,10 @@ In BFS, all edges have equal weight. BFS processes states level by level, so the
 
 
 
+
+## **Leetcode 76 Minimum subarray length (sliding window):
+
+Frequency array constructs initial map for window, so freq[elements] +=1
+but then, if a subarray satisfies this, then it may decrease the frequency while traversing through the array and the current window freq = 0, that means all the need is done for the window, store the answer and move forward. and so, decrease the frequency while traversing and when remove elements from the window, increase them. and do not touch for elements that were not in the initial t, as we dont have to consider them. 
+
+
