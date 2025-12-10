@@ -139,3 +139,10 @@ Because of this, **TypeScript must know how to compile that service separately**
 
 
 
+
+
+# Middleware
+
+	We do isAuth, which verifies if request is authorized or not. so the request passes through middleware, which searches for bearer token in the request. jwt verify with the JWT SECRET KEY, if this is decoded or not, if yes, then proceed with whatever logic the endpoint is intended to have. 
+	
+	if not, then just return at any point of time here.
