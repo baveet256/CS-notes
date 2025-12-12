@@ -197,3 +197,16 @@ Meaning:
 |Count subarrays with sum ≤ k|variable-sized + prefix|
 
 ---
+
+
+A structure can look like:
+
+start with including J in the result. 
+
+then write the shrinking logic,
+		while (when shrinking needs to be done):
+			i+=1
+
+THen we are at a place where answer can be possible. 
+
+j+=1
