@@ -112,4 +112,16 @@ but then, if a subarray satisfies this, then it may decrease the frequency while
 
 
 
-Prims's Algorithm - Graph
+## Frequency of the frequent Element, Leetcode- 1838
+		there are k operations, all adds to the current element, do atmost k to have the most frequency for any element. 
+
+We can just add to element, so picking x , and we cant change >x elements. 
+
+so , these all seems disordered. make it all ordered and do sorting. 
+
+
+for x, x-1 is very likely close and would need the least operations, to get the frequency same. 
+
+so search the ele by binary search, if mid is possible then below it would definately be. 
+
+so move ahead. logn to search and we need to check if that element is possible
