@@ -1,4 +1,4 @@
- 
+
 #Problems:
 
 Code maintainability : Not easy to integrate new features
@@ -124,7 +124,7 @@ Liskov Substitution Principle:
 	
 	if user/client calls on some function on a class, then method on that class and its child classes can be called. the methods that are parent to the class, cannot be called as they could have less functionality and child always has atleast same functions of the parent.
 	
-	so in short return current or narrower and not broader one.
+	so in short return current or broader and not a narrower one.
 	
 	Similarly for exceptions, if a parent method defines, lets say a logic error
 	then its child cannot throw exception which are from a different class and can only throw the child exception classes
