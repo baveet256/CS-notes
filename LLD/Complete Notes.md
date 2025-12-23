@@ -176,6 +176,8 @@ Strategy Design Pattern
 
 	The things that changes at runtime, take them off the parent class, use composition solve the complex and big inheritence. Make sure to have static content in parent, and dynamic ones are on composition.
 
+	It is defined as :  set of algorithms, put them in seperate classes, this is done, to change the content at runtime. 
+
 	For example:
 		We Build a class with some methods, and new child can inherit them and also extend their functionality
 		Problem happens when, these new child methods implement same new functions.
@@ -183,8 +185,9 @@ Strategy Design Pattern
 	Inheritance hierarchy  :
 			It can provide some relieve but if varieties of classes arrive then it will just complicate the whole system.
 			Start from basic reasoning, identify the parts of system in 2: static and dynamic things. make the dynamic part flexible to extend and it should not block or bother the static part.
-			> 	In the Robot example, talk,walk,fly were some problems. So just put them in seperate classes, then in runtime we can make objects dynamically with the requirement
-			> 	 Main class if often called client, as it has no algo's, just reference to different strategies (here its talk, walk, fly)
-			> 	 Talkable is an abstract class and its children can be many strategies, so if a new talking pattern comes, then it can be integrated here, just make a new child with that talking. Similarly, for fly and walk too.
+Robot example :  talk, walk, fly were some problems. 
 
-	Favour composition over inheritence
+	So just put them in seperate classes, then in runtime we can make objects dynamically with the requirement
+	Main class if often called client, as it has no algo's, just reference to different strategies (here its talk, walk, fly), Talkable is an abstract class and its children can be many strategies, so if a new talking pattern comes, then it can be integrated here, just make a new child with that talking. Similarly, for fly and walk too.
+
+Favor composition over inheritence
