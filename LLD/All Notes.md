@@ -174,6 +174,8 @@ Build Google Docs - Canvas , py code
 
 Strategy Design Pattern
 
+	The things that changes at runtime, take them off the parent class, use composition solve the complex and big inheritence. Make sure to have static content in parent, and dynamic ones are on composition.
+
 	For example:
 		We Build a class with some methods, and new child can inherit them and also extend their functionality
 		Problem happens when, these new child methods implement same new functions.
