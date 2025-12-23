@@ -1,9 +1,9 @@
 
 `class Robot:`
     `def __init__(self, talk_strategy, walk_strategy, fly_strategy):`
-        `self.talk_strategy = talk_strategy`
-        `self.walk_strategy = walk_strategy`
-        `self.fly_strategy = fly_strategy`
+        `self.talk_strategy = talk_strategy` ### Has a relation here
+        `self.walk_strategy = walk_strategy` ### Has a relation here
+        `self.fly_strategy = fly_strategy` ### Has a relation here
 
     `def talk(self):`
         `self.talk_strategy.talk()`
