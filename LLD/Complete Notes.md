@@ -194,12 +194,22 @@ Strategy Design Pattern
 
 
 Factory Design Pattern: 
+	
+	In the Strategy pattern when creating the objects, we need to pass actual reference to robot class, the different strategies. 
+	
+	This client does not need to know the dependencies of the robot class, maybe just tell its requirements to a a factory class and this factory makes the object based on the requirement and returns it to the client. 
+	
+	Hence the factory  came to picture. so user passes on what it wants, we can use AI or tokenization/ cleaning to have the actual word which matches with the set of available dependencies, and makes the obj then, if there is unavailability of requirement, simply return None to the user to try again with a different requirement or name
+	
+	
+	Defination: Defines an interface for creating objects but allows subclasses to decide which class to instantiate.
+		
+		## Handy example:
 
-In the Strategy pattern when creating the objects, we need to pass actual reference to robot class, the different strategies. 
-
-This client does not need to know the dependencies of the robot class, maybe just tell its requirements to a a factory class and this factory makes the object based on the requirement and returns it to the client. 
-
-Hence the factory  came to picture. so user passes on what it wants, we can use AI or tokenization/ cleaning to have the actual word which matches with the set of available dependencies, and makes the obj then, if there is unavailability of requirement, simply return None to the user to try again with a different requirement or name
+		Imagine a *notification system*, with child classes as sms,email,phone
+		So to send notification other services may not know the references directly. 
+		Instead a factory class can have this and can return the created object to the client.
 
 
-Defination: Defines an interface for creating objects but allows subclasses to decide which class to instantiate.
+	We Use Factory when we need to *seperate object creation logic* from the system.
+
