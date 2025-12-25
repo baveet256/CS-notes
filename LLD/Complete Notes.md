@@ -185,9 +185,21 @@ Strategy Design Pattern
 	Inheritance hierarchy  :
 			It can provide some relieve but if varieties of classes arrive then it will just complicate the whole system.
 			Start from basic reasoning, identify the parts of system in 2: static and dynamic things. make the dynamic part flexible to extend and it should not block or bother the static part.
-Robot example :  talk, walk, fly were some problems. 
+	Robot example :  talk, walk, fly were some problems. 
+	
+		So just put them in seperate classes, then in runtime we can make objects dynamically with the requirement
+		Main class if often called client, as it has no algo's, just reference to different strategies (here its talk, walk, fly), Talkable is an abstract class and its children can be many strategies, so if a new talking pattern comes, then it can be integrated here, just make a new child with that talking. Similarly, for fly and walk too.
+	
+	Favor composition over inheritence
 
-	So just put them in seperate classes, then in runtime we can make objects dynamically with the requirement
-	Main class if often called client, as it has no algo's, just reference to different strategies (here its talk, walk, fly), Talkable is an abstract class and its children can be many strategies, so if a new talking pattern comes, then it can be integrated here, just make a new child with that talking. Similarly, for fly and walk too.
 
-Favor composition over inheritence
+Factory Design Pattern: 
+
+In the Strategy pattern when creating the objects, we need to pass actual reference to robot class, the different strategies. 
+
+This client does not need to know the dependencies of the robot class, maybe just tell its requirements to a a factory class and this factory makes the object based on the requirement and returns it to the client. 
+
+Hence the factory  came to picture. so user passes on what it wants, we can use AI or tokenization/ cleaning to have the actual word which matches with the set of available dependencies, and makes the obj then, if there is unavailability of requirement, simply return None to the user to try again with a different requirement or name
+
+
+Defination: Defines an interface for creating objects but allows subclasses to decide which class to instantiate.
