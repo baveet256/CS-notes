@@ -193,7 +193,7 @@ It never “forgets” the environment from its birth.
 
 **Microtask Queue**
 
-- Stores microtasks: **Promise callbacks**, queueMicrotask, MutationObserver.
+- Stores microtasks: **Promise callbacks**, queueMicrotask, MutationObserver, fetch().
     
 - Runs **before** the task queue, after each execution frame.
     
