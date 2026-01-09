@@ -275,4 +275,5 @@ Promises don’t care WHERE you are — only whether you return or throw.
 
 Async is a keyword for registering async functions, it always returns a promise.
 
-use await in front of the promise in the async function to handle promises there.
+await can only be used inside an async function. Use await in front of the promise in the async function to handle promises there.
+
