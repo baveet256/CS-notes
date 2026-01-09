@@ -271,13 +271,7 @@ Copy codereturnPromise.reject(error);
 Promises don’t care WHERE you are — only whether you return or throw.
 
 ---
+#  Async Await 
 
-### 1️⃣3️⃣ Mapping to async / await (preview)
+Async is a keyword for registering async functions, it always returns a promise.
 
-|Promise|async/await|
-|---|---|
-|return value|return value|
-|throw error|throw error|
-|.catch()|try/catch|
-
-Same rules. Different syntax.
