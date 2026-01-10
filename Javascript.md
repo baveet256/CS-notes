@@ -279,5 +279,12 @@ await can only be used inside an async function. Use await in front of the promi
 
 JS engine do not wait for promise to be resolved, just go to next line. 
 
-await is like .then to the promise it carries.
+await is like .then to the promise it carries and the js waits for that to be resolved until it executes the next line. 
+
+The WAIT IS TRICKY:
+	###
+	A Promise starts running as soon as it’s created, not when you await it. For example, if p1 is declared at the start of the program with a 10-second timer, the countdown begins immediately. By the time execution reaches await p1, the promise has already been working in the background. The await doesn’t start the timer — it simply pauses execution until the promise resolves. Meanwhile, p2 also started its own timer when it was declared. If p2 has a 5-second timer, then 5 seconds later it’s already resolved — even if the code hasn’t reached await p2 yet. So, when execution finally reaches await p2, there’s no extra waiting. The promise is already settled, so JavaScript just grabs its value instantly and assigns it to val2.
+
+
+	 
 
