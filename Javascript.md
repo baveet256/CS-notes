@@ -277,3 +277,7 @@ Async is a keyword for registering async functions, it always returns a promise.
 
 await can only be used inside an async function. Use await in front of the promise in the async function to handle promises there and it **resolves promise
 
+JS engine do not wait for promise to be resolved, just go to next line. 
+
+await is like .then to the promise it carries.
+
