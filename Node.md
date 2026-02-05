@@ -40,6 +40,8 @@ node_modules are always ignored so yea if someone clones your repo, just do npm 
 
 package-lock.json - Maintains depencies of dependencies. 
 
+you cannot remove a directory when it has some content.
+
 
 
 
