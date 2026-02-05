@@ -11,3 +11,10 @@ But if you do:
 Each update uses the **latest value**, so you get +2.
 
 React gives you the function form to guarantee **correctness** when the next state depends on the previous one.
+
+
+Think of state updates as:
+
+> “I’m describing **how** to compute the next state, not setting it directly.”
+
+That’s the mental model React wants.

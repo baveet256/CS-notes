@@ -1,0 +1,12 @@
+
+NodeJS Module Wrapper
+```javascript
+(function wrapper (exports, require, module, __filename, __dirname) {  
+       
+    
+ });
+```
+
+Every source code in nodejs, is stored in NodeJS wrapper and that runs when executed like wrapper();
+
+
