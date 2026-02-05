@@ -23,7 +23,7 @@ require('./math.js') , search math in current directory
 ../ one directory up
 ../../ 2 directory up
 
-
+To install packages, which actually has all the external names of libraries installed, we need a package.json file / make our current project as a package.
 
 On Root Project, create a file package.json, it is a configuration file for the project:
 
@@ -31,5 +31,13 @@ like, Name, version, scripts, dependencies {},
 
 use npm init, automatically creates package.json file for me.
 
-dependicies keeps track for all third party modules in the project
+dependicies keeps track for all third party modules in the project.
+
+node_modules/ has all the source code of 3rd party modules that are installed. 
+
+
+
+
+
+
 
