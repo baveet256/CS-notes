@@ -10,3 +10,10 @@ NodeJS Module Wrapper
 Every source code in nodejs, is stored in NodeJS wrapper and that runs when executed like wrapper();
 
 
+require checks 
+
+First, if there is 3rd party
+Second, built in module,
+Third, Error Throw now
+
+
