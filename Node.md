@@ -31,5 +31,5 @@ like, Name, version, scripts, dependencies {},
 
 use npm init, automatically creates package.json file for me.
 
-
+dependicies keeps track for all third party modules in the project
 
