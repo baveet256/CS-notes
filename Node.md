@@ -17,4 +17,19 @@ Second, built in module,
 Third, Error Throw now
 
 
+require('./math.js') , search math in current directory
+
+./ current
+../ one directory up
+../../ 2 directory up
+
+
+
+On Root Project, create a file package.json, it is a configuration file for the project:
+
+like, Name, version, scripts, dependencies {}, 
+
+use npm init, automatically creates package.json file for me.
+
+
 
