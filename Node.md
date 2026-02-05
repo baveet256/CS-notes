@@ -49,6 +49,8 @@ you cannot remove a directory when it has some content.
 
 So, readfileSync actually is a blocking code. as its just have to wait for the reading to be completed.
 
+so Yea, use await, use ASYNC HERE!!!
+
 
 
 
