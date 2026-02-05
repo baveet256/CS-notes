@@ -35,7 +35,10 @@ dependicies keeps track for all third party modules in the project.
 
 node_modules/ has all the source code of 3rd party modules that are installed. 
 
+node_modules are always ignored so yea if someone clones your repo, just do npm install, the package.json has the info of all the depencies and the same environment would be recreated there.
 
+
+package-lock.json - Maintains depencies of dependencies. 
 
 
 
