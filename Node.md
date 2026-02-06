@@ -51,6 +51,7 @@ So, readfileSync actually is a blocking code. as its just have to wait for the r
 
 so Yea, use await, use ASYNC HERE!!!
 
+readFile is async, also pass a callback function with error, data as params. thats better
 
 
 
