@@ -290,7 +290,7 @@ The WAIT IS TRICKY:
 Promise.all - 
 .race - 
 .allsettled - 
-.any -  waits for first resolved promise.
+.any -  waits for first resolved settled promise.
 
 
 
