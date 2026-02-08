@@ -287,3 +287,9 @@ The WAIT IS TRICKY:
 
 	 
 
+Promise.all - 
+.race - 
+.allsettled - 
+.any - 
+
+
