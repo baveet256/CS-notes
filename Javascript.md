@@ -290,7 +290,7 @@ The WAIT IS TRICKY:
 Promise.all - 
 .race - 
 .allsettled - 
-.any -  waits for first resolved settled promise.
+.any -  waits for first resolved settled promise. In any if all the settled promises results in failure, then it returns an array of errors (Aggregated errors)
 
 
 
